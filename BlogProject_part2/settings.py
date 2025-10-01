@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'posts',
     'categories',
-    'profiles',
     'authors',
     'crispy_forms',
     'crispy_bootstrap5',
@@ -47,6 +46,7 @@ INSTALLED_APPS = [
 ]
 CRISPY_ALLOWED_TEMPALTES_PACK ='bootstrap5'
 CRISPY_TEMPLATE_PACK='bootstrap5'
+LOGIN_REDIRECT_URL = '/author/profile/'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -57,7 +57,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'BlogProject.urls'
+ROOT_URLCONF = 'BlogProject_part2.urls'
 
 TEMPLATES = [
     {
@@ -74,7 +74,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'BlogProject.wsgi.application'
+WSGI_APPLICATION = 'BlogProject_part2.wsgi.application'
 
 
 # Database

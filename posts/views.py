@@ -7,6 +7,7 @@ def addPost(request):
     if request.method=='POST':
         forrm=addpost(request.POST)
         if forrm.is_valid():
+            forrm.instance.author = request.user
             forrm.save()
             return redirect('addpost')
     else:
@@ -21,6 +22,7 @@ def editPost(request,id):
     if request.method=='POST':
         forrm=addpost(request.POST,instance=post)
         if forrm.is_valid():
+            forrm.instance.author = request.user
             forrm.save()
             return redirect('home')
     

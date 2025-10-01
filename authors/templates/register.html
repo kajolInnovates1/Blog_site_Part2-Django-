@@ -2,7 +2,7 @@
 {% load crispy_forms_tags %}
 {% block content%}
 
-<h1>This is Add author page </h1>
+<h1 class="text-center">{{type}}</h1>
 <form method="POST" style="width: 50%;margin:auto">
     {% csrf_token %}
 
